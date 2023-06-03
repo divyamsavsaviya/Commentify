@@ -2,6 +2,10 @@
 import * as vscode from 'vscode';
 import { window, workspace, commands, ExtensionContext } from 'vscode';
 import axios from 'axios';
+require('dotenv').config();
+import { config } from 'dotenv';
+
+config();
 
 async function addCommentsAboveFunctions() {
     const editor = window.activeTextEditor;
@@ -40,13 +44,14 @@ async function addCommentsAboveFunctions() {
 
 async function getCommentFromChatGPT(functionName: string, functionBody: string): Promise<string> {
     try {
+        const API_KEY = process.env.API_KEY;
         const response = await axios.post('https://api.openai.com/v1/engines/davinci-codex/completions', {
             prompt: `Function: ${functionName}\n\nBody: ${functionBody}\n\nDescription: `,
             max_tokens: 50,
             temperature: 0.7,
         }, {
             headers: {
-                'Authorization': 'Bearer YOUR_API_KEY',
+                'Authorization': `Bearer ${API_KEY}`,
                 'Content-Type': 'application/json',
             },
         });
