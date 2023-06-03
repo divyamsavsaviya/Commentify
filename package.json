@@ -1,21 +1,23 @@
 {
   "name": "commentify",
   "displayName": "Commentify",
-  "description": "Turbocharge Your Code with AI-Generated Comments! Automatically add informative and professional comments above your functions in seconds. Let ChatGPT unleash its language prowess to effortlessly document your code. Boost readability, collaboration, and save valuable time. Elevate your code with Commentify!",
-  "version": "0.0.1",
+  "description": "Turbocharge Your Code with AI-Generated Comments!",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.78.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.addCommentsAboveFunctions"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "commentify.helloWorld",
-        "title": "Hello World"
+        "command": "extension.addCommentsAboveFunctions",
+        "title": "Add Comments Above Functions"
       }
     ]
   },
@@ -39,5 +41,17 @@
     "mocha": "^10.2.0",
     "typescript": "^5.0.4",
     "@vscode/test-electron": "^2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divyamsavsaviya/Commentify"
+  },
+  "keybindings": [
+    {
+      "command": "extension.addCommentsAboveFunctions",
+      "key": "ctrl+shift+c",
+      "mac": "cmd+shift+c",
+      "when": "editorTextFocus"
+    }
+  ]
 }
