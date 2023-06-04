@@ -2,8 +2,6 @@
 
 Commentify is a Visual Studio Code extension that automates the process of adding informative and professional comments above your functions using AI-generated content. It enhances code readability, collaboration, and saves valuable development time.
 
-![Commentify in Action]
-
 ## Features
 
 - Automatically adds comments above JavaScript and JavaScript React functions.
@@ -35,13 +33,13 @@ Commentify currently doesn't require any additional configuration. It utilizes t
 
 ## Troubleshooting
 
-If you encounter any issues or have questions, you can reach out to us by creating an issue in the [Commentify GitHub repository](https://github.com/your-username/commentify).
+If you encounter any issues or have questions, you can reach out to us by creating an issue in the [Commentify GitHub repository](https://github.com/divyamsavsaviya/commentify).
 
 ## Contributions
 
-Contributions are welcome! If you would like to contribute to Commentify, please follow the guidelines in the [CONTRIBUTING.md] file.
+Contributions are welcome! If you would like to contribute to Commentify.
 
 ## License
 
-This project is licensed under the [MIT License].
+This project is licensed under the MIT License.
 
